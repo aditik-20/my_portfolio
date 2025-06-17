@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditi Krishna Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(145, 144, 144);
+        color: rgb(3, 0, 0);
+      }
+      nav {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        height: 70px;
+        color: azure;
+        background-color: rgb(19, 0, 129);
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 30px;
+      }
+      nav ul a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: azure;
+      }
+
+      nav ul a:hover {
+        color: rgb(101, 115, 9);
+      }
+      .left {
+        font-size: 2rem;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 24vh 0px;
+      }
+      .firstsection > div {
+        width: 40%;
+      }
+      .leftsection {
+        font-size: 3rem;
+        margin: 30px 0;
+        margin-left: 80px;
+      }
+      .rightsection img {
+        width: 300px;
+        height: auto;
+        margin-top: -60px;
+        border-radius: 10px;
+        margin-left: 40px; /* move right */
+        border-radius: 10px;
+      }
+
+      .name {
+        color: rgb(36, 1, 79);
+      }
+      .intro {
+        font-size: 2rem;
+        margin-top: 25px;
+        color: rgb(103, 6, 54);
+      }
+      #element {
+        font-size: 2rem;
+        margin-top: 25px;
+        color: rgb(14, 70, 1);
+      }
+      main hr {
+        border: 0;
+        background-color: blueviolet;
+        height: 1.2px;
+        margin: 40px 85px;
+      }
+      .secondsection {
+        font-size: 2rem;
+        margin: 40px 0;
+        margin-left: 80px;
+      }
+      .secondsection p {
+        padding: 5px;
+        margin-right: 15px;
+        gap: 10px;
+        color: rgb(87, 4, 63);
+        line-height: 1;
+        font-size: 1.7rem;
+      }
+      .secondsection h2 {
+        margin-bottom: 20px;
+      }
+      .thirdsection {
+        font-size: 2rem;
+        margin: 40px 0;
+        margin-left: 80px;
+        padding: 50px 20px;
+      }
+      .fourthsection {
+        font-size: 2rem;
+        margin: 40px 0;
+        margin-left: 80px;
+      }
+      footer {
+        background-color: rgb(19, 0, 129);
+        color: azure;
+        height: 220px;
+      }
+      .footer {
+        display: flex;
+        margin: 50px 90px;
+        justify-content: space-around;
+        align-items: center;
+        color: azure;
+      }
+      .first-footer {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+        font-weight: bolder;
+        align-items: center;
+        text-align: center;
+      }
+      .second-footer ul {
+        list-style: none;
+        display: block;
+      }
+      .second-footer ul li {
+        text-decoration: none;
+        margin: 20px;
+      }
+      .second-footer a {
+        text-decoration: none;
+        color: black;
+        margin: 10px;
+        font-weight: bold;
+      }
+      .projectcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+      .project1 {
+        background-color: rgb(215, 215, 215);
+        border-radius: 12px;
+        width: 300px;
+        padding: 20px;
+      }
+      .portfolioimg {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      .project1 h3 {
+        font-size: 28px;
+        color: #1e3a8a;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .project1 p {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 12px;
+      }
+
+      .view-button {
+        display: inline-block;
+        background-color: transparent;
+        color: rgb(35, 23, 0);
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+
+      .view-button:hover {
+        text-decoration: underline;
+        color: darkorange;
+      }
+
+      @media (max-width: 780px) {
+        .firstsection {
+          flex-direction: column;
+          align-items: center;
+          margin: 60px 70px;
+        }
+        .firstsection > div {
+          width: 90%;
+        }
+        .leftsection {
+          font-size: 3rem;
+          margin: 20px 0;
+        }
+        .rightsection img {
+          max-width: 250px;
+          height: auto;
+        }
+        .thirdsection {
+          font-size: 1.5rem;
+          margin-left: 20px;
+          margin-right: 20px;
+          padding: 20px;
+        }
+        .project1 {
+          width: 90%;
+        }
+
+        nav {
+          flex-direction: column;
+          height: auto;
+          padding: 10px 0;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+        .footer {
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+        .inputform input {
+          width: 100%;
+        }
+      }
+
+      .fourthsection form {
+        max-width: 590px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin: auto;
+      }
+      .inputform {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+        gap: 10px;
+      }
+      .fourthsection input,
+      .fourthsection textarea {
+        width: 100%;
+        padding: 15px;
+        border: #333 solid;
+        border-radius: 8px;
+      }
+      .fourthsection input[type="submit"] {
+        background-color: rgb(19, 0, 129);
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .fourthsection input[type="submit"]:hover {
+        background-color: rgb(210, 95, 120);
+      }
+      .skill h3 {
+        margin: 15px;
+        margin-left: 60px;
+      }
+      .skill ul {
+        list-style: none;
+      }
+      .skill li {
+        margin: 7px;
+        margin-left: 80px;
+        font-size: 1.7rem;
+      }
+      .skill strong {
+        color: rgb(16, 2, 64);
+      }
+      .sociallinks {
+        margin: 0px;
+        padding: 10px;
+      }
+      .sociallinks h3 {
+        margin: 15px;
+        margin-left: 60px;
+      }
+      .sociallinks a {
+        margin: 120px;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(93, 0, 31);
+      }
+      .sociallinks a:hover {
+        color: #1e3a8a;
+      }
+      .educationsection {
+        font-size: 2rem;
+        margin: 40px 0;
+        margin-left: 80px;
+      }
+
+      .educationsection ul {
+        list-style-type: none;
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+
+      .educationsection li {
+        font-size: 1.7rem;
+        color: rgb(24, 0, 75);
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Aditi Krishna Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          <p>Hi, I am <span class="name">Aditi Krishna</span></p>
+
+          <div class="intro">
+            A passionate learner stepping into the world of Web Development.
+          </div>
+          <span id="element"></span>
+        </div>
+        <div class="rightsection">
+          <img src="./profile_photo.png" alt="profile" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondsection">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate and dedicated web developer with a strong interest
+          in creating responsive and user-friendly websites. My journey in
+          development began with learning HTML and CSS, and I have since
+          expanded into JavaScript, UI/UX design, and portfolio building.
+        </p>
+        <p>
+          I enjoy solving problems, learning new technologies, and building
+          projects that showcase my skills and creativity. Currently, I am
+          working on personal projects to further improve my coding and design
+          abilities.
+        </p>
+        <div class="skill">
+          <h3>Skills:</h3>
+          <ul>
+            <li><strong>Programming Languages :</strong> C , Java</li>
+            <li>
+              <strong>Web Technologies : </strong>HTML5 , CSS , JavaScript
+            </li>
+            <li><strong>Tools :</strong> Git , GitHub , VS Code</li>
+            <li><strong>Core Concept :</strong> Object-Oriented-Programming</li>
+            <li>
+              <strong>Soft Skills :</strong> Problem Solving, Self-Motivated,
+              Quick Learner, Team Collaboration
+            </li>
+          </ul>
+        </div>
+        <div class="sociallinks">
+          <h3>Connect With Me</h3>
+          <a href="www.linkedin.com/in/akkrishna"><i>Linkedin</i></a>
+          <a href="https://github.com/aditikrishsharma"><i>Github</i></a>
+        </div>
+        <div class="educationsection">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>Degree:</strong> B.Tech in Computer Science</li>
+            <li>
+              <strong>Institution:</strong> SRM Institute of Science and
+              Technology, Chennai
+            </li>
+            <li><strong>Graduation Year:</strong> 2028</li>
+          </ul>
+        </div>
+      </section>
+      <hr />
+      <section class="thirdsection">
+        <h2>Projects</h2>
+        <div class="projectcontainer">
+          <div class="project1">
+            <img src="./portfolioimg.png" alt="" class="portfolioimg" />
+            <h3>Personal Portfolio</h3>
+            <p>
+              A personal portfolio website showcasing my background, skills, and
+              projects, built with HTML, CSS, and JavaScript for a clean and
+              responsive UI.
+            </p>
+            <a href="/" class="view-button"> 🪟View</a>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="fourthsection">
+        <h2>Contact Me</h2>
+        <form action="#">
+          <div class="inputform">
+            <input type="text" placeholder="Full Name " />
+            <input type="email" placeholder="Email Id " />
+          </div>
+          <div class="inputform">
+            <input type="number" placeholder="Mobile Number" />
+            <input type="text" placeholder="Email Subject" />
+          </div>
+          <textarea
+            name=""
+            cols="28"
+            rows="10"
+            placeholder="Your Message"
+            id=""
+          ></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="first-footer">Aditi Developer Portfolio</div>
+        <div class="second-footer">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer , Problem Solver"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
