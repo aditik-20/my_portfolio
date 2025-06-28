@@ -16,8 +16,8 @@ Hi, I'm Aditi Krishna — a passionate Computer Science student and aspiring web
 ## 📫 Contact Me
 - Email: ak.krishnaaditi@gmail.com
 - LinkedIn: www.linkedin.com/in/akkrishna
-- GitHub: [[Your GitHub username or link]](https://github.com/aditikrishsharma)
-
+- GitHub: (https://github.com/aditikrishsharma)
+](https://github.com/aditikrishsharma)
 ## 🚀 How It’s Built
 This portfolio is built using HTML and CSS and deployed with Vercel.
 
