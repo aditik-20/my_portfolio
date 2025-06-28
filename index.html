@@ -15,7 +15,9 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="./Resume Aditi Krishna.pdf" download class="text-blue-600 font-semibold">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
+
           </ul>
         </div>
       </nav>
@@ -103,25 +105,19 @@
       <hr />
       <section id="contact" class="fourthsection">
         <h2>Contact Me</h2>
-        <form action="#">
+        <form action="https://formsubmit.co/ak.krishnaaditi@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
           <div class="inputform">
-            <input type="text" placeholder="Full Name " />
-            <input type="email" placeholder="Email Id " />
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email Id" required />
           </div>
           <div class="inputform">
-            <input type="number" placeholder="Mobile Number" />
-            <input type="text" placeholder="Email Subject" />
+            <input type="number" name="mobile" placeholder="Mobile Number" required />
           </div>
-          <textarea
-            name=""
-            cols="28"
-            rows="10"
-            placeholder="Your Message"
-            id=""
-          ></textarea>
+          <textarea name="message" cols="28" rows="10" placeholder="Your Message" required></textarea>
           <input type="submit" value="Send Message" />
         </form>
-      </section>
+        
     </main>
     <footer>
       <div class="footer">
