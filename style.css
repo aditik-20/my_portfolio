@@ -51,8 +51,9 @@ nav ul a:hover {
 .firstsection {
   display: flex;
   justify-content: space-around;
-  margin: 24vh 0px;
+  margin: 60px 0;
 }
+
 .firstsection > div {
   width: 40%;
 }
