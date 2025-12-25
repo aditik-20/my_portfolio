@@ -84,7 +84,7 @@ body {
 /* LEFT TEXT */
 .hero-left h1 {
   font-family: "Allura", cursive;
-  font-size: 4.2rem;
+  font-size: 4rem;
 }
 
 .hero-left h1 span {
@@ -92,7 +92,7 @@ body {
 }
 
 .hero-center img {
-  width: 230px;
+  width: 260px;
   height: 80%;
   object-fit: cover;
   border-radius: 10%;
@@ -100,7 +100,7 @@ body {
 
 /* RIGHT DESCRIPTION */
 .hero-right p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.05rem;
   color: #475569;
   max-width: 420px;
@@ -129,7 +129,7 @@ body {
 
 /* ---------- SECTIONS ---------- */
 .section {
-  padding: 90px 9%;
+  padding: 60px 9%;
 }
 
 .section h2 {
@@ -149,8 +149,9 @@ body {
 }
 
 .section p {
-  max-width: 850px;
+  max-width: 90 0px;
   color: #475569;
+  font-size: 1.2rem;
 }
 
 /* ---------- SKILLS ---------- */
@@ -172,6 +173,7 @@ body {
   padding-left: 20px;
   position: relative;
   color: #334155;
+  font-size: 1.2rem;
 }
 
 .skills ul li::before {
