@@ -100,11 +100,12 @@ body {
 
 /* RIGHT DESCRIPTION */
 .hero-right p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.05rem;
-  color: #475569;
+  font-family: "Great Vibes";
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #000000;
   max-width: 420px;
-  line-height: 1.7;
+  line-height: 2;
 }
 
 /* ---------- RESPONSIVE ---------- */
