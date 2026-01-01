@@ -55,12 +55,13 @@ body {
 .navbar nav a:hover::after {
   width: 100%;
 }
-.email-link {
+.link {
   padding: 8px 18px;
   border: 2px solid #2563eb;
   border-radius: 999px;
-  color: #000000; /* black */
-  font-weight: 500;
+  color: #1a0881; /* black */
+  font-weight: 300;
+  font-size: 0.7rem;
   transition: all 0.3s ease;
 }
 
