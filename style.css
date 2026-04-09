@@ -315,11 +315,22 @@ footer {
   font-weight: 600;
   color: #2563eb;
 }
+@media (max-width: 900px) {
+  .navbar {
+    position: static; /* removes sticky behavior */
+  }
+}
+/* Default (desktop) */
 .navbar {
-  position: sticky; /* or fixed */
+  position: sticky;
   top: 0;
-  width: 100%;
-  background: rgba(255,255,255,0.9);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .navbar {
+    position: static;
+  }
 }
 @media (max-width: 900px) {
   .navbar {
