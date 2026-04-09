@@ -335,17 +335,24 @@ footer {
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .navbar nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;   /* ✅ horizontal */
+    flex-wrap: wrap;       /* optional: wraps if no space */
+    justify-content: center;
     width: 100%;
-    margin-top: 10px;
   }
 
   .navbar nav a {
-    margin: 10px 0;
+    margin: 8px 10px; /* spacing between links */
   }
+}
+.navbar nav {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;   /* allows scroll if too many links */
+  white-space: nowrap;
 }
