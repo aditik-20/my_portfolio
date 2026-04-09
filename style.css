@@ -315,3 +315,26 @@ footer {
   font-weight: 600;
   color: #2563eb;
 }
+.navbar {
+  position: sticky; /* or fixed */
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+}
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+  }
+}
