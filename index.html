@@ -1,179 +1,1308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditi Krishna | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
-      rel="stylesheet"
-    />
+    <title>Aditi Krishna | Modern Developer Portfolio</title>
+
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <h1 class="logo">Aditi Krishna</h1>
-      <nav>
-        <nav>
-          <a class="link" href="#about">About</a>
-          <a class="link" href="#skills">Skills</a>
-          <a class="link" href="mailto:ak.krishnaaditi@gmail.com" class="link"
-            >ak.krishnaaditi@gmail.com</a
-          >
-          <a href="https://www.linkedin.com/in/akkrishna/" class="link"
-            >Linkedin</a
-          >
-          <a href="https://github.com/aditik-20" class="link">aditik-20</a>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Mouse Pointer Ambient Glow Effect -->
+    <div id="mouse-glow" class="mouse-glow"></div>
+
+    <!-- 1. STICKY NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="#home" class="logo">
+          <span class="logo-name">Aditi Krishna</span>
+          <span class="logo-dot">.</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </nav>
-      </nav>
+
+        <!-- Right Actions: Resume Button & Hamburger Menu -->
+        <div class="nav-actions">
+          <a href="./Aditi_Krishna.pdf" target="_blank" class="btn-resume">
+            <span>Resume</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+
+          <button
+            class="mobile-menu-btn"
+            id="mobile-menu-btn"
+            aria-label="Toggle menu"
+          >
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu Dropdown -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link active">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#achievements" class="mobile-link">Achievements</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <div class="mobile-resume-wrapper">
+          <a
+            href="./Aditi_Krishna.pdf"
+            target="_blank"
+            class="btn-resume mobile-resume-btn"
+          >
+            <span>Resume</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Hello, I’m <span>Aditi Krishna</span></h1>
-      </div>
+    <main>
+      <!-- 2. HERO SECTION -->
+      <section id="home" class="hero">
+        <!-- Ambient Glow Blobs -->
+        <div class="glow-blob blob-1"></div>
+        <div class="glow-blob blob-2"></div>
+        <div class="glow-blob blob-3"></div>
 
-      <div class="hero-center">
-        <img src="./profile_photo.png" alt="Aditi Krishna" />
-      </div>
+        <!-- Canvas Background Particle Effect -->
+        <canvas id="hero-canvas"></canvas>
 
-      <div class="hero-right">
-        <p>
-          Turning ideas into scalable applications with Java and solid DSA
-          fundamentals.
-        </p>
-        <a href="#projects" class="view-project-btn">View Projects →</a>
-      </div>
-    </section>
+        <div class="hero-container">
+          <!-- Left Content -->
+          <div class="hero-content">
+            <div class="hero-badge fade-up">
+              <span class="pulse-dot"></span> Open for Backend & Full-Stack
+              Roles
+            </div>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        I’m an aspiring Full-Stack Developer with strong problem-solving
-        skills and a solid foundation in Data Structures and Algorithms. I enjoy
-        building scalable, maintainable applications.
-      </p>
-      <p>
-        I also have hands-on experience in Data Analysis using SQL, Excel, and
-        Power BI to create meaningful dashboards and insights.
-      </p>
+            <h1 class="hero-title fade-up">
+              <span class="greeting">Hi, I'm</span>
+              <span class="name-gradient">Aditi Krishna</span>
+            </h1>
 
-      <div id="skills" class="skills">
-        <div>
-          <h3>Technical Skills</h3>
-          <ul>
-            <li><strong>Languages:</strong> C, Java, Python</li>
-            <li><strong>Web:</strong> HTML, CSS, JavaScript,Node js , Express</li>
-            <li><strong>Database:</strong> MySQL</li>
-            <li><strong>Tools:</strong> Git, GitHub, Excel, Power BI</li>
-            <li><strong>Concepts:</strong> OOP, DSA, OS</li>
-          </ul>
+            <div class="hero-roles fade-up">
+              <span class="role-badge">Software Engineer</span>
+              <span class="role-badge">Backend Developer</span>
+            </div>
+
+            <p class="hero-subtext fade-up">
+              Java | Spring Boot | AI Enthusiast
+            </p>
+
+            <p class="hero-description fade-up">
+              Building scalable backend applications with Java, Spring Boot, SQL
+              and AI while solving real-world problems.
+            </p>
+
+            <div class="hero-cta fade-up">
+              <a
+                href="./Aditi_Krishna.pdf"
+                target="_blank"
+                class="btn-resume btn-hero-primary"
+              >
+                <span>Download Resume</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </a>
+              <a href="#projects" class="btn-secondary">
+                <span>View Projects</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Profile Image Card -->
+          <div class="hero-image-wrapper fade-up">
+            <div class="profile-glow-ring"></div>
+            <div class="profile-glass-card float-animation">
+              <div class="image-container">
+                <img
+                  src="./profile_photo.png"
+                  alt="Aditi Krishna Profile Photo"
+                  class="profile-img"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="floating-badge badge-1">
+                <div class="badge-icon">☕</div>
+                <div class="badge-text">
+                  <span class="badge-title">Java & Spring</span>
+                  <span class="badge-sub">Backend Core</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-2">
+                <div class="badge-icon">⚡</div>
+                <div class="badge-text">
+                  <span class="badge-title">AI & SQL</span>
+                  <span class="badge-sub">Scalable Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ABOUT ME SECTION -->
+      <section id="about" class="section about-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Get To Know Me</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-content fade-up">
+              <h3 class="about-heading">
+                Crafting Scalable Backend Solutions with Passion & Precision
+              </h3>
+              <p class="about-text">
+                I am a Computer Science Engineering student at SRM IST with a
+                strong focus on backend software development, scalable system
+                architectures, and algorithmic problem-solving.
+              </p>
+              <p class="about-text">
+                My technical toolkit centers around <strong>Java</strong>,
+                <strong>Spring Boot</strong>, <strong>MySQL</strong>, and
+                <strong>RESTful APIs</strong>. I love turning complex logic into
+                simple, robust code and exploring how Artificial Intelligence
+                can elevate backend services.
+              </p>
+              <p class="about-text">
+                Beyond backend engineering, I possess strong analytical skills
+                in Data Analysis using SQL and Power BI to extract actionable
+                insights and drive data-driven decision making.
+              </p>
+
+              <div class="about-highlights">
+                <div class="highlight-item fade-up">
+                  <div class="highlight-icon">🚀</div>
+                  <div>
+                    <h4>Fast Learner</h4>
+                    <p>Adapting quickly to modern tech stacks</p>
+                  </div>
+                </div>
+                <div class="highlight-item fade-up">
+                  <div class="highlight-icon">🧩</div>
+                  <div>
+                    <h4>Problem Solver</h4>
+                    <p>Strong foundation in DSA & OOP concepts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cards">
+              <div class="about-card glass-card fade-up">
+                <div class="card-header-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="card-content">
+                  <span class="card-badge">Education</span>
+                  <h3>B.Tech in Computer Science Engineering</h3>
+                  <p class="institution">
+                    SRM Institute of Science and Technology (SRM IST)
+                  </p>
+                  <div class="card-meta">
+                    <span class="year-badge">2024 – 2028</span>
+                    <span class="cgpa-badge">High Academic Standing</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-card glass-card fade-up">
+                <div class="card-header-icon accent-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    ></polygon>
+                  </svg>
+                </div>
+                <div class="card-content">
+                  <span class="card-badge accent-badge">Key Milestones</span>
+                  <h3>Achievements & Recognition</h3>
+                  <ul class="achievement-list">
+                    <li>
+                      <span class="bullet">✦</span>
+                      <div>
+                        <strong>BNY Summer Internship</strong>
+                        <p>Selected for prestigious tech summer program</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="bullet">✦</span>
+                      <div>
+                        <strong>Merit Scholarship Recipient</strong>
+                        <p>Awarded for outstanding academic performance</p>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="bullet">✦</span>
+                      <div>
+                        <strong>Hackathon Judge</strong>
+                        <p>Invited to evaluate tech innovation projects</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SKILLS SECTION -->
+      <section id="skills" class="section skills-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Technical Expertise</span>
+            <h2 class="section-title">Skills</h2>
+            <p class="section-description">
+              Technologies I use to build modern and scalable applications.
+            </p>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Backend -->
+            <div class="skill-card fade-up">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrapper">
+                  <svg
+                    class="skill-icon"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="skill-title">Backend</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Python</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-card fade-up">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrapper">
+                  <svg
+                    class="skill-icon"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="3"
+                      width="20"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h3 class="skill-title">Frontend</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">HTML</span>
+                  <span class="skill-tag">CSS</span>
+                  <span class="skill-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-card fade-up">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrapper">
+                  <svg
+                    class="skill-icon"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <h3 class="skill-title">Database</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">MySQL</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">SQL</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Tools -->
+            <div class="skill-card fade-up">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrapper">
+                  <svg
+                    class="skill-icon"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="skill-title">Tools</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">GitHub</span>
+                  <span class="skill-tag">VS Code</span>
+                  <span class="skill-tag">Microsoft Excel</span>
+                  <span class="skill-tag">NumPy</span>
+                  <span class="skill-tag">Pandas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. EXPERIENCE SECTION -->
+      <section id="experience" class="section experience-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Career Path</span>
+            <h2 class="section-title">Experience</h2>
+            <p class="section-description">
+              My professional journey through internships, research and
+              real-world projects.
+            </p>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="exp-timeline">
+            <!-- Item 1: AI Research Intern -->
+            <div class="exp-item fade-up">
+              <div class="exp-dot"></div>
+              <div class="exp-card glass-card">
+                <div class="exp-card-header">
+                  <div class="exp-role-meta">
+                    <div class="exp-company-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="7"
+                          width="20"
+                          height="14"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <path
+                          d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="exp-title">AI Research Intern</h3>
+                      <h4 class="exp-company">
+                        Coding Blocks School of Technology
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="exp-date-badge">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect
+                        x="3"
+                        y="4"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>June 2026 – July 2026 (45 Days)</span>
+                  </div>
+                </div>
+
+                <p class="exp-overview">
+                  Worked on Artificial Intelligence and Machine Learning
+                  projects under industry mentorship while building intelligent
+                  applications using Generative AI and Large Language Models.
+                </p>
+
+                <!-- Key Projects Sub-block -->
+                <div class="exp-projects-block">
+                  <h5 class="exp-projects-title">Key Projects</h5>
+                  <div class="exp-projects-grid">
+                    <div class="exp-project-item">
+                      <div class="exp-project-header">
+                        <span class="exp-project-bullet">✦</span>
+                        <strong>Customer Churn Prediction</strong>
+                      </div>
+                      <p>
+                        Developed a machine learning model for predicting
+                        customer churn using data preprocessing, feature
+                        engineering and classification techniques.
+                      </p>
+                    </div>
+
+                    <div class="exp-project-item">
+                      <div class="exp-project-header">
+                        <span class="exp-project-bullet">✦</span>
+                        <strong>AI Research Assistant</strong>
+                      </div>
+                      <p>
+                        Built an intelligent assistant capable of searching,
+                        retrieving and summarizing research papers using
+                        semantic search and LLMs.
+                      </p>
+                    </div>
+
+                    <div class="exp-project-item">
+                      <div class="exp-project-header">
+                        <span class="exp-project-bullet">✦</span>
+                        <strong>Agentic AI Research Assistant</strong>
+                      </div>
+                      <p>
+                        Designed a multi-agent AI research system capable of
+                        planning, searching, reasoning and generating
+                        comprehensive research reports autonomously.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tech Stack Pills -->
+                <div class="exp-tech-stack">
+                  <span class="exp-tech-tag">Python</span>
+                  <span class="exp-tech-tag">Machine Learning</span>
+                  <span class="exp-tech-tag">Scikit-learn</span>
+                  <span class="exp-tech-tag">Pandas</span>
+                  <span class="exp-tech-tag">NumPy</span>
+                  <span class="exp-tech-tag">LangChain</span>
+                  <span class="exp-tech-tag">FAISS</span>
+                  <span class="exp-tech-tag">Hugging Face</span>
+                  <span class="exp-tech-tag">LLMs</span>
+                  <span class="exp-tech-tag">Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. FEATURED PROJECTS SECTION -->
+      <section id="projects" class="section projects-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Portfolio Showcase</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">
+              A curated selection of applications built with Java, Spring Boot,
+              React, and AI.
+            </p>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card glass-card fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="./bank.avif"
+                  alt="FinPilot Project Preview"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <span class="overlay-tag">Desktop FinTech</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">FinPilot</h3>
+                <p class="project-description">
+                  Java Swing-based ATM and banking system with deposit,
+                  withdrawal, real-time balance inquiry, and transaction history
+                  logging.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">Swing</span>
+                  <span class="project-tag">OOP</span>
+                  <span class="project-tag">MySQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/aditik-20/ATMAPP"
+                    target="_blank"
+                    class="btn-project btn-github"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://github.com/aditik-20/ATMAPP"
+                    target="_blank"
+                    class="btn-project btn-demo"
+                  >
+                    <span>Live Demo</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card glass-card fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="./messlytics.png"
+                  alt="Messlytics Project Preview"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <span class="overlay-tag">Analytics Platform</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Messlytics</h3>
+                <p class="project-description">
+                  Smart mess management analytics platform designed to track
+                  food consumption, optimize meal preparation, and automate
+                  billing insights.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">Spring Boot</span>
+                  <span class="project-tag">SQL</span>
+                  <span class="project-tag">Power BI</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/aditik-20"
+                    target="_blank"
+                    class="btn-project btn-github"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://github.com/aditik-20"
+                    target="_blank"
+                    class="btn-project btn-demo"
+                  >
+                    <span>Live Demo</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card glass-card fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="./evalai.jpg"
+                  alt="Resume Evaluator AI Project Preview"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <span class="overlay-tag">AI / Machine Learning</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Resume Evaluator AI</h3>
+                <p class="project-description">
+                  AI-driven resume evaluation web application built with Flask
+                  and React, using LLM-based intelligence for instant ATS score
+                  analysis.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Flask</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">LLM AI</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/aditik-20/EvaloraAi.git"
+                    target="_blank"
+                    class="btn-project btn-github"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://github.com/aditik-20/EvaloraAi.git"
+                    target="_blank"
+                    class="btn-project btn-demo"
+                  >
+                    <span>Live Demo</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card glass-card fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="./weathericon.png"
+                  alt="SkyCast Weather Project Preview"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <span class="overlay-tag">Web App</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">SkyCast Weather</h3>
+                <p class="project-description">
+                  Real-time weather forecasting web application with dynamic
+                  city search, OpenWeatherMap API integration, and animated
+                  weather metrics.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">HTML5/CSS3</span>
+                  <span class="project-tag">REST API</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/aditik-20/WeatherSite"
+                    target="_blank"
+                    class="btn-project btn-github"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://weatherapp-eight-indol.vercel.app/"
+                    target="_blank"
+                    class="btn-project btn-demo"
+                  >
+                    <span>Live Demo</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. ACHIEVEMENTS SECTION -->
+      <section id="achievements" class="section achievements-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Honors & Recognition</span>
+            <h2 class="section-title">Achievements</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card glass-card fade-up">
+              <div class="achievement-icon-box">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="achievement-details">
+                <span class="achievement-tag">Internship</span>
+                <h3 class="achievement-title">BNY Summer Internship</h3>
+                <p class="achievement-desc">
+                  Selected for the prestigious tech summer program at BNY.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievement-card glass-card fade-up">
+              <div class="achievement-icon-box accent-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 15l-2 5l9-9l-4 0l2-5l-9 9l4 0z"></path>
+                  <circle cx="12" cy="8" r="7"></circle>
+                </svg>
+              </div>
+              <div class="achievement-details">
+                <span class="achievement-tag accent-tag">Scholarship</span>
+                <h3 class="achievement-title">Merit Scholarship Recipient</h3>
+                <p class="achievement-desc">
+                  Awarded for outstanding academic performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievement-card glass-card fade-up">
+              <div class="achievement-icon-box">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="achievement-details">
+                <span class="achievement-tag">Leadership</span>
+                <h3 class="achievement-title">Hackathon Judge</h3>
+                <p class="achievement-desc">
+                  Invited to evaluate tech innovation projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. EDUCATION TIMELINE SECTION -->
+      <section id="education" class="section education-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Academic Journey</span>
+            <h2 class="section-title">Education</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="education-timeline">
+            <div class="timeline-item fade-up">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2024 – 2028</span>
+                <h3 class="timeline-title">B.Tech CSE</h3>
+                <h4 class="timeline-institution">
+                  SRM Institute of Science and Technology
+                </h4>
+                <p class="timeline-status">Graduation: 2028</p>
+              </div>
+            </div>
+
+            <div class="timeline-item fade-up">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2022 – 2024</span>
+                <h3 class="timeline-title">XIIth</h3>
+                <h4 class="timeline-institution">City Central High School</h4>
+                <p class="timeline-status">
+                  Passed out : 2024 - <strong>90%</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item fade-up">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2020 – 2022</span>
+                <h3 class="timeline-title">Xth</h3>
+                <h4 class="timeline-institution">DAV Public School</h4>
+                <p class="timeline-status">
+                  Passed out : 2022 - <strong>97%</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. CONTACT SECTION -->
+      <section id="contact" class="section contact-section">
+        <div class="section-container">
+          <div class="section-header fade-up">
+            <span class="section-subtitle">Let's Connect</span>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-description">
+              Feel free to reach out for backend engineering opportunities or
+              project collaborations.
+            </p>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info-cards fade-up">
+              <a
+                href="mailto:ak.krishnaaditi@gmail.com"
+                class="contact-card glass-card"
+              >
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">ak.krishnaaditi@gmail.com</span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/akkrishna/"
+                target="_blank"
+                class="contact-card glass-card"
+              >
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    ></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">linkedin.com/in/akkrishna</span>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/aditik-20"
+                target="_blank"
+                class="contact-card glass-card"
+              >
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">github.com/aditik-20</span>
+                </div>
+              </a>
+
+              <div class="resume-card-box">
+                <a
+                  href="./Aditi_Krishna.pdf"
+                  target="_blank"
+                  class="btn-resume btn-contact-resume"
+                >
+                  <span>Download Resume</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper glass-card fade-up">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Mobile Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Mobile Number"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit">
+                  <span>Send Message</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 10. FOOTER & BACK TO TOP -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <a href="#home" class="logo">Aditi Krishna<span>.</span></a>
+          <p>© 2026 Aditi Krishna. All rights reserved.</p>
         </div>
 
-        <div>
-          <h3>Education</h3>
-          <ul>
-            <li><strong>B.Tech CSE</strong></li>
-            <li>SRM Institute of Science and Technology</li>
-            <li>Graduation: 2028</li>
-          </ul>
-          <ul>
-            <li><strong>XIIth</strong></li>
-            <li>City Central High School</li>
-            <li>Passed out : 2024 - 90%</li>
-          </ul>
-          <ul>
-            <li><strong>Xth</strong></li>
-            <li>DAV Public School</li>
-            <li>Passed out : 2022 - 97%</li>
-          </ul>
+        <div class="footer-right">
+          <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+            <span>Back to Top</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section gray">
-      <h2>Projects</h2>
-
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="./bank.avif" alt="" />
-          <h3>FinTech</h3>
-          <p>
-            Java Swing-based ATM system with withdrawal, deposit, balance
-            inquiry, and transaction history.
-          </p>
-          <a href="https://github.com/aditik-20/ATMAPP" target="_blank"
-            >GitHub →</a
-          >
-        </div>
-
-        <div class="project-card">
-          <img src="./evalai.jpg" alt="" />
-          <h3>EvaloraAI</h3>
-          <p>
-           Resume Evaluation Platform: Created an AI-powered resume evaluation platform using Flask and React with LLM-based analysis.
-          </p>
-          
-          <a href="https://github.com/aditik-20/EvaloraAi.git" target="_blank"
-            >GitHub →</a
-          >
-        </div>
-
-        <div class="project-card">
-          <img src="./weathericon.png" alt="" />
-          <h3>SkyCast</h3>
-          <p>Real-time weather app using OpenWeatherMap API.</p>
-          <a href="https://weatherapp-eight-indol.vercel.app/" target="_blank"
-            >Live →</a
-          >
-          <a href="https://github.com/aditik-20/WeatherSite" target="_blank"
-            >GitHub →</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email" required />
-        <input type="number" placeholder="Mobile Number" required />
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2025 Aditi Krishna | Built with ❤️</p>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-      new Typed("#element", {
-        strings: ["Problem Solver", "Java Developer", "Tech Enthusiast"],
-        typeSpeed: 60,
-        backSpeed: 40,
-        loop: true,
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
