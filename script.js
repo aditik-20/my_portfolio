@@ -206,13 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Contact Form Submit Event
+    // 8. Contact Form Submit Event (Visual Only)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for reaching out! Your message has been sent successfully.');
-            contactForm.reset();
+            // Form submission intentionally disabled for visual redesign
         });
     }
 });
