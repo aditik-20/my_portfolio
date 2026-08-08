@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canvas) {
         const ctx = canvas.getContext('2d');
         let particles = [];
-        const particleCount = 35;
+        const particleCount = 15;
 
         const resizeCanvas = () => {
             canvas.width = canvas.parentElement.clientWidth;
@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 2 + 1;
-                this.color = Math.random() > 0.5 ? 'rgba(37, 99, 235, ' : 'rgba(59, 130, 246, ';
-                this.alpha = Math.random() * 0.4 + 0.1;
-                this.vx = (Math.random() - 0.5) * 0.4;
-                this.vy = (Math.random() - 0.5) * 0.4;
+                this.radius = Math.random() * 1.5 + 0.5;
+                this.color = 'rgba(255, 255, 255, ';
+                this.alpha = Math.random() * 0.1 + 0.05;
+                this.vx = (Math.random() - 0.5) * 0.2;
+                this.vy = (Math.random() - 0.5) * 0.2;
             }
 
             draw() {
@@ -152,8 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // 6. Fade Up Scroll Reveal Observer
-    const fadeUpElements = document.querySelectorAll('.fade-up');
+    // 6. Fade Up & Sequence Scroll Reveal Observer
+    const fadeUpElements = document.querySelectorAll('.fade-up, .anim-seq, .telemetry-panel');
     
     const fadeUpObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -168,7 +168,34 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeUpElements.forEach(el => fadeUpObserver.observe(el));
 
 
-    // 7. Back To Top Button Smooth Scroll
+    // 7. Active Missions Selector Logic
+    const missionSelectorBtns = document.querySelectorAll('.mission-selector-btn');
+    const missionDisplays = document.querySelectorAll('.mission-display');
+
+    missionSelectorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active classes
+            missionSelectorBtns.forEach(b => b.classList.remove('active'));
+            missionDisplays.forEach(d => d.classList.remove('active-mission'));
+
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            // Find and show target display
+            const targetId = btn.getAttribute('data-target');
+            const targetDisplay = document.getElementById(targetId);
+            if (targetDisplay) {
+                targetDisplay.classList.add('active-mission');
+                
+                // Retrigger the fade animation by removing and re-adding the element
+                // This forces the CSS animation to play again
+                targetDisplay.style.animation = 'none';
+                targetDisplay.offsetHeight; /* trigger reflow */
+                targetDisplay.style.animation = null; 
+            }
+        });
+    });
+    // 8. Back To Top Button Smooth Scroll
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
